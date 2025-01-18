@@ -33,7 +33,7 @@ class Script
 
     static void Compiler_WixSourceGenerated(XDocument document)
     {
-        document.Root.Select("Product")
+        document.Root.Select(Compiler.ProductElementName)
                      .Add(XElement.Parse(
                             @"<UI>
                                   <Publish Dialog=""WelcomeDlg"" Control=""Next"" Event=""NewDialog"" Order=""5"" Value=""InstallDirDlg"">1</Publish>
